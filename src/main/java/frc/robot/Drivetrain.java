@@ -8,6 +8,7 @@ import frc.robot.utils.Constants.OIConstants;
 import frc.robot.utils.Constants.DriveConstants;
 import frc.robot.Drivetrain;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import edu.wpi.first.math.MathUtil;
 public class Drivetrain {
     private final SparkMax m_drivLeftSpark = new SparkMax(DriveConstants.kLeftDrivID, 
     MotorType.kBrushless);
@@ -20,7 +21,8 @@ public class Drivetrain {
     public void drive() {
         
         m_robotDrive = new DifferentialDrive(m_drivLeftSpark, m_drivRightSpark);
-        m_robotDrive.tankDrive(-m_drivController.getLeftY(), -m_drivController.getRightY());
+        m_robotDrive.tankDrive(-MathUtil.applyDeadband(m_drivController.getLeftY(), OIConstants.kDriveDeadband)
+        ,-MathUtil.applyDeadband(m_drivController.getRightY(), OIConstants.kDriveDeadband));
 
     }
 
