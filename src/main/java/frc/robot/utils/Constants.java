@@ -9,6 +9,8 @@ public class Constants {
         public static final int kRightDrivID = 6;
         public static final int kVortexID = 4;
         
+        // Encoder Conversion factor
+        public static final double kEncConstant = Math.PI * 6 / 8.46;
 
     }
     public static final class OIConstants {
@@ -17,5 +19,10 @@ public class Constants {
         // Driver Controller Deadband
         public static final double kDriveDeadband = 0.05;
 
+    }
+
+    public static final class MiscConstants {
+        // Vortex PID setpoint 
+        public static final double setpoint = 1;
     }
 }
