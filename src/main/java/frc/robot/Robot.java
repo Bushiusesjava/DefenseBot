@@ -5,10 +5,13 @@
 package frc.robot;
 
 
+import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.Drivetrain;
+
+
 
  
 
@@ -25,7 +28,10 @@ public class Robot extends TimedRobot {
   
   /** Called once at the beginning of the robot program. */
  
-
+  @Override
+  public void robotPeriodic() {
+    CommandScheduler.getInstance().run(); 
+  }
   @Override
   public void teleopPeriodic() {
     
