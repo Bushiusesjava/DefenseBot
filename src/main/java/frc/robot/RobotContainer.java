@@ -19,7 +19,10 @@ public class RobotContainer {
     CommandXboxController m_drivController = new CommandXboxController(OIConstants.kDriverControllerPort);
     public RobotContainer() {
       configureBindings();
-    
+      m_robotDrive.setDefaultCommand(
+        new RunCommand(
+          () -> m_robotDrive.drive()
+        ));
         
     }
 
@@ -31,7 +34,7 @@ public class RobotContainer {
     }
     
     public void teleopPeriodic() {
-
+        
     }
     
     

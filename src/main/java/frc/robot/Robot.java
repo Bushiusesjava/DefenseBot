@@ -13,17 +13,6 @@ import frc.robot.RobotContainer;
 import frc.robot.Subsystems.Drivetrain;
 
 
-
-
-
-
-
- 
-
-
-
-
-
 /**
  * This is a demo program showing the use of the DifferentialDrive class, specifically it contains
  * the code necessary to operate a robot with tank drive.
@@ -33,19 +22,18 @@ public class Robot extends TimedRobot {
   private RobotContainer m_robotContainer;
   
   /** Called once at the beginning of the robot program. */
-
+  
   public Robot() {
     m_robotContainer = new RobotContainer();
   }
-  @Override 
-  public void robotInit() {
-
-  }
+  
  
   @Override
   public void robotPeriodic() {
+
     CommandScheduler.getInstance().run(); 
   }
+  
   @Override
   public void teleopPeriodic() {
 

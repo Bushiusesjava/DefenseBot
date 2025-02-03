@@ -13,13 +13,12 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-
 import com.revrobotics.spark.SparkClosedLoopController;
 
-public class Drivetrain {
+public class Drivetrain extends SubsystemBase {
     private final SparkMax m_drivLeftSpark = new SparkMax(DriveConstants.kLeftDrivID, 
     MotorType.kBrushless);
-    private final SparkMax m_drivRightSpark = new SparkMax(DriveConstants.kLeftDrivID, 
+    private final SparkMax m_drivRightSpark = new SparkMax(DriveConstants.kRightDrivID, 
     MotorType.kBrushless); 
     private DifferentialDrive m_robotDrive;
     private final CommandXboxController m_drivController = new CommandXboxController(OIConstants.kDriverControllerPort);
@@ -35,7 +34,7 @@ public class Drivetrain {
 
     }
 
-   
+    
 
 
 }
