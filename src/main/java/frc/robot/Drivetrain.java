@@ -11,7 +11,10 @@ import frc.robot.utils.Constants.MiscConstants;
 import frc.robot.Drivetrain;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.math.MathUtil;
+<<<<<<< HEAD
 import com.revrobotics.spark.SparkClosedLoopController;
+=======
+>>>>>>> ec4c8cf69b4fe6d528c459f820e2d302da8606e8
 public class Drivetrain {
     private final SparkMax m_drivLeftSpark = new SparkMax(DriveConstants.kLeftDrivID, 
     MotorType.kBrushless);
@@ -27,12 +30,15 @@ public class Drivetrain {
         m_robotDrive = new DifferentialDrive(m_drivLeftSpark, m_drivRightSpark);
         m_robotDrive.tankDrive(-MathUtil.applyDeadband(m_drivController.getLeftY(), OIConstants.kDriveDeadband)
         ,-MathUtil.applyDeadband(m_drivController.getRightY(), OIConstants.kDriveDeadband));
+<<<<<<< HEAD
 
     }
 
     public boolean setPos() {
         vortexpid.setReference(MiscConstants.setpoint, ControlType.kMAXMotionPositionControl);
         return true;
+=======
+>>>>>>> ec4c8cf69b4fe6d528c459f820e2d302da8606e8
 
     }
 

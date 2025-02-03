@@ -14,6 +14,8 @@ import frc.robot.RobotContainer;
 
 
 
+
+
  
 
 
@@ -29,11 +31,21 @@ public class Robot extends TimedRobot {
   private RobotContainer m_robotContainer;
   
   /** Called once at the beginning of the robot program. */
+<<<<<<< HEAD
   public Robot() {
     m_robotContainer = new RobotContainer();
   }
   @Override 
   public void robotInit() {
+=======
+ 
+  @Override
+  public void robotPeriodic() {
+    CommandScheduler.getInstance().run(); 
+  }
+  @Override
+  public void teleopPeriodic() {
+>>>>>>> ec4c8cf69b4fe6d528c459f820e2d302da8606e8
     
 
   }
