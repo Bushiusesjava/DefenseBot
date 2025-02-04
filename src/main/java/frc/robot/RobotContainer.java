@@ -28,9 +28,10 @@ public class RobotContainer {
 
     public void configureBindings() {
         m_drivController.leftBumper()
-        .onTrue(Commands.runOnce(
+        .onTrue(new InstantCommand(
           () -> m_setVortex.setPos(),
           m_setVortex));
+          
     }
     
     public void teleopPeriodic() {

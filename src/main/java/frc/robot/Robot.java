@@ -8,9 +8,6 @@ package frc.robot;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
-import com.revrobotics.spark.SparkBase.PersistMode;
-import com.revrobotics.spark.SparkBase.ResetMode;
-
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotContainer;
@@ -29,8 +26,14 @@ public class Robot extends TimedRobot {
   /** Called once at the beginning of the robot program. */
   
   public Robot() {
+
     m_robotContainer = new RobotContainer();
     
+  }
+
+  @Override 
+  public void robotInit() {
+
   }
   
  
