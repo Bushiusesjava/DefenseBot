@@ -12,14 +12,20 @@ import frc.robot.utils.Constants.MiscConstants;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
 import com.revrobotics.spark.SparkClosedLoopController;
+import frc.robot.utils.Configs;
+import com.revrobotics.spark.config.SparkMaxConfig;
+import com.revrobotics.spark.SparkBase.ResetMode;
+import com.revrobotics.spark.SparkBase.PersistMode;
+import com.revrobotics.spark.SparkMax;
 
 public class Drivetrain extends SubsystemBase {
     private final SparkMax m_drivLeftSpark = new SparkMax(DriveConstants.kLeftDrivID, 
     MotorType.kBrushless);
+    //m_drivLeftSpark.configure(Configs.lConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     private final SparkMax m_drivRightSpark = new SparkMax(DriveConstants.kRightDrivID, 
     MotorType.kBrushless); 
+    //m_drivRightSpark.configure(Configs.rConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     private DifferentialDrive m_robotDrive;
     private final CommandXboxController m_drivController = new CommandXboxController(OIConstants.kDriverControllerPort);
     
