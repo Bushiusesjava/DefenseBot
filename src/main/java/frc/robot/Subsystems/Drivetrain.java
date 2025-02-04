@@ -12,7 +12,6 @@ import frc.robot.utils.Constants.MiscConstants;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
 import com.revrobotics.spark.SparkClosedLoopController;
 
 public class Drivetrain extends SubsystemBase {
