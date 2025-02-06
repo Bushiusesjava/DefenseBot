@@ -5,9 +5,10 @@ public class Constants {
         // Max Speed in M/S
         public static final int kMaxSpeed = 0;
         // Spark MAX CAN IDs
+        public static final int kVortexID = 4;
         public static final int kLeftDrivID = 5;
         public static final int kRightDrivID = 6;
-        public static final int kVortexID = 4;
+        
         
         // Encoder Conversion factor
         public static final double kEncConstant = Math.PI * 6 / 8.46;

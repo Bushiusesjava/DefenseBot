@@ -17,20 +17,14 @@ public class RobotContainer {
     public static final Drivetrain m_robotDrive = new Drivetrain();
     public static final Setvortex m_setVortex = new Setvortex();
     CommandXboxController m_drivController = new CommandXboxController(OIConstants.kDriverControllerPort);
+
     public RobotContainer() {
       configureBindings();
-      m_robotDrive.setDefaultCommand(
-        new RunCommand(
-          () -> m_robotDrive.drive()
-        ));
-        
+      m_robotDrive.setDefaultCommand(new RunCommand(() -> m_robotDrive.drive(), m_robotDrive));
     }
 
     public void configureBindings() {
-        m_drivController.leftBumper()
-        .onTrue(new InstantCommand(
-          () -> m_setVortex.setPos(),
-          m_setVortex));
+        m_drivController.a().onTrue(new InstantCommand(() -> m_setVortex.setPos(), m_setVortex));
           
     }
     

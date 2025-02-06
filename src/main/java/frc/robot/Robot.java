@@ -20,7 +20,6 @@ import frc.robot.utils.Configs;
  * the code necessary to operate a robot with tank drive.
  */
 public class Robot extends TimedRobot {
-  private final Drivetrain drivetrain = new Drivetrain();
   private RobotContainer m_robotContainer;
   
   /** Called once at the beginning of the robot program. */
@@ -45,9 +44,6 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-
-    
-
   }
 
   

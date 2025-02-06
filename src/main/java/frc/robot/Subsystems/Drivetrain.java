@@ -20,19 +20,21 @@ import com.revrobotics.spark.SparkBase.PersistMode;
 
 
 public class Drivetrain extends SubsystemBase {
-    private final SparkMax m_drivLeftSpark = new SparkMax(DriveConstants.kLeftDrivID, 
-    MotorType.kBrushless);
+    private final SparkMax m_drivLeftSpark;
     
-    private final SparkMax m_drivRightSpark = new SparkMax(DriveConstants.kRightDrivID, 
-    MotorType.kBrushless); 
+    private final SparkMax m_drivRightSpark; 
+    
     
     private DifferentialDrive m_robotDrive;
     private final CommandXboxController m_drivController = new CommandXboxController(OIConstants.kDriverControllerPort);
     
     
     public Drivetrain() {
-        m_drivRightSpark.configure(Configs.rConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+        m_drivLeftSpark = new SparkMax(DriveConstants.kLeftDrivID, MotorType.kBrushless);
         m_drivLeftSpark.configure(Configs.lConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
+        
+        m_drivRightSpark = new SparkMax(DriveConstants.kRightDrivID, MotorType.kBrushless);
+        m_drivRightSpark.configure(Configs.rConfig, ResetMode.kResetSafeParameters, PersistMode.kPersistParameters);
     }
     
     public void drive() {
